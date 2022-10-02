@@ -6,7 +6,7 @@ import config as c
 import keyboard as kb
 from telebot import types
 
-session = vk_api.VkApi(token=c.ACCESS_TOKEN)
+session = vk_api.VkApi(token=c.ACCESS_TOKEN, scope='offline')
 vk = session.get_api()
 
 bot = telebot.TeleBot(c.TOKEN, parse_mode='HTML')
